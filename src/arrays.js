@@ -7,8 +7,6 @@ export default array => {
     .filter(item => item > 0)
     .sort(sortNumber)
     .reverse();
-  console.log("negative: ", negativeArr);
-  console.log("positive: ", positiveArr);
 
   const positivePairs = [];
   const negativePairs = [];
@@ -42,10 +40,5 @@ export default array => {
   const positivePairsSum = positivePairs.reduce((a, b) => a + b, 0);
   const negativePairsSum = negativePairs.reduce((a, b) => a + b, 0);
 
-  console.log("pairs product: ", positivePairs);
-  console.log("negative product: ", negativePairs);
-  console.log("pairs sum: ", positivePairsSum);
-  console.log("negative pairs sum: ", negativePairsSum);
-  console.log("LARGEST SUM: ", positivePairsSum + negativePairsSum);
   return positivePairsSum + negativePairsSum;
 };

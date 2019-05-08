@@ -19,17 +19,6 @@ class App extends React.Component {
     arrayToTest: []
   };
 
-  componentDidMount() {
-    const sum = getLargestPairSum([0, 1, 2]);
-    this.setState(state => ({
-      ...state,
-      sums: {
-        ...state.sums,
-        sum
-      }
-    }));
-  }
-
   renderOptions = () => {
     const { arrays } = this.state;
     return Object.keys(arrays).map(keyName => (
